@@ -5,6 +5,7 @@ box-sizing: border-box;
 font-family: 'Poppins', sans-serif;
 }
 
+/*estilo del encabezado*/
 header{
     background-color: dodgerblue;
     padding: 20px 30px;
@@ -19,6 +20,7 @@ header{
     width: 100vw;
 }
 
+/*estilo del login*/
 form{
     display: flex;
     justify-content: center;
@@ -81,6 +83,7 @@ button:hover{
     border: 1px solid rgb(98, 164, 230);
 }
 
+/*estilo del menu*/
 .producto{
     display: flex;
     justify-content: center;
@@ -88,3 +91,14 @@ button:hover{
     margin-left: 33px;
     width: 130px;
 }
+
+/*estilo carga de producto*/
+.c_archivo{
+    width: 400px;
+    margin-right: 20px;
+}
+
+.boton_cp{
+    margin-top: 80px;
+}
+
