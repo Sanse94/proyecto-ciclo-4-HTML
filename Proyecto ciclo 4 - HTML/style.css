@@ -44,6 +44,9 @@ section{
 
 .c_usuario{
     margin-left: 50px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid dodgerblue;
 }
 
 label{
@@ -52,7 +55,7 @@ label{
     color:rgb(23, 77, 131);
 }
 
-input{
+.caja{
     width: 250px;
     height: 40px;
     border: 1px solid dodgerblue;
@@ -61,14 +64,15 @@ input{
 .buttons{
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 350px;
     margin-top: 40px;
 }
 
-button{
-    padding: 10px;
-    width: 120px;
+.button{
+    padding: 20px;
+    width: 150px;
     font-size: 20px;
+    line-height: 5px;
     color: white;
     border-radius: 10px;
     background-color: rgb(98, 164, 230);
@@ -76,7 +80,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.button:hover{
     color: black;
     background: white;
     border: 1px solid rgb(98, 164, 230);
