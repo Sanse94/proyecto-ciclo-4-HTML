@@ -105,3 +105,10 @@ label{
     margin-top: 80px;
 }
 
+nav{
+	list-style-type: none;
+}
+
+nav li {
+	margin-top: 20px;
+}
