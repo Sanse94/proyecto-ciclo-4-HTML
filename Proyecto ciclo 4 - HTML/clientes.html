@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Genérica - Clientes</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="contenedor">
+        <section class="seccion">
+            <form action="" method="post">
+                <table>
+                    <tr>
+                        <td><label for="">Cédula</label></td>
+                        <td><input type="text" required maxlength="15" id="cedula" class="caja"/></td>
+                        <td><label for="">Teléfono</label></td>
+                        <td><input type="text" maxlength="15" id="telefono" class="caja" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Nombre Completo</label></td>
+                        <td><input type="text" required maxlength="50" class="caja" /></td>
+                        <td><label for="">Correo Electrónico</label></td>
+                        <td><input type="email" maxlength="50" id="correo" class="caja" /></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Dirección</label></td>
+                        <td><input type="text" required maxlength="50" class="caja" /></td>
+                    </tr>
+                </table>
+                <div  class="buttons_crud">
+                    <input type="submit" class="button" value="Consultar" id="btn_consultar"> 
+                    <input type="submit" class="button" value="Crear" id="btn_crear"> 
+                    <input type="submit" class="button" value="Actualizar" id="btn_actualizar"> 
+                    <input type="submit" class="button" value="Borrar" id="btn_borrar"> 
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
