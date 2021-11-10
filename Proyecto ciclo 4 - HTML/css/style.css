@@ -1,0 +1,121 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+/*estilo del encabezado*/
+header{
+    background-color: dodgerblue;
+    padding: 20px 30px;
+    color: white;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+}
+
+/*estilo del login*/
+form{    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2{
+    font-size: 40px;
+    padding: 15px;
+    color:rgb(23, 77, 131);
+}
+
+section{
+    display: inline-block;
+    padding: 15px;
+}
+
+.seccion{
+    margin-right: 0px;
+}
+
+.c_usuario{
+    margin-left: 50px;
+    width: 250px;
+    height: 40px;
+    border: 1px solid dodgerblue;
+}
+
+label{
+    padding: 0 30px;
+    font-size: 25px;
+    color:rgb(23, 77, 131);
+}
+
+.caja{
+    width: 250px;
+    height: 40px;
+    border: 1px solid dodgerblue;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin-top: 40px;
+}
+
+.buttons_crud{
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    margin-top: 40px;
+}
+
+.button{
+    padding: 20px 0px;
+    width: 130px;
+    font-size: 20px;
+    line-height: 5px;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(98, 164, 230);
+    transition: all .6s ease;
+    cursor: pointer;
+}
+
+.button:hover{
+    color: black;
+    background: white;
+    border: 1px solid rgb(98, 164, 230);
+}
+
+/*estilo del menu*/
+.producto{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 33px;
+    width: 130px;
+}
+
+/*estilo carga de producto*/
+.c_archivo{
+    width: 400px;
+    margin-right: 20px;
+}
+
+.boton_cp{
+    margin-top: 80px;
+}
+
+nav{
+	list-style-type: none;
+}
+
+nav li {
+	margin-top: 20px;
+}
