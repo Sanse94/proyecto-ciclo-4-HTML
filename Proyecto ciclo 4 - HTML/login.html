@@ -17,7 +17,7 @@
 
   <body>
     <div class="contenedor">
-      <form>
+      <form action="/validar" method="post">
         <h2>Acceso al Sistema</h2>
         <section class="seccion">
           <label>Usuario</label>
@@ -25,11 +25,11 @@
         </section>
         <section>
           <label>Contraseña</label>
-          <input type="password" class="caja" name="c_contraseña" required maxlength="15" />
+          <input type="password" class="caja" name="c_contrasena" required maxlength="15" />
         </section>
         <div class="buttons">
-          <input type="submit" class="button" value="Aceptar"></input>
-          <input type="submit" class="button" value="Cancelar"></input>
+          <a href="menu.html" ><input type="submit" class="button" value="Aceptar"></input></a>
+          <a href="index.html"><button type="button" class="button">Cancelar</button></a>
         </div>
       </form>
     </div>

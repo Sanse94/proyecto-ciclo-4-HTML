@@ -8,7 +8,7 @@ font-family: 'Poppins', sans-serif;
 /*estilo del encabezado*/
 header{
     background-color: dodgerblue;
-    padding: 20px 30px;
+    padding: 10px 30px;
     color: white;
 }
 
@@ -21,7 +21,8 @@ header{
 }
 
 /*estilo del login*/
-form{    display: flex;
+form{    
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -56,7 +57,7 @@ label{
 }
 
 .caja{
-    width: 250px;
+    width: 190px;
     height: 40px;
     border: 1px solid dodgerblue;
 }
@@ -119,3 +120,23 @@ nav{
 nav li {
 	margin-top: 20px;
 }
+
+.cajon{
+    margin-left: 20px;
+    width: 100px;
+    height: 40px;
+    border: 1px solid dodgerblue;
+}
+
+.cajas{
+    width: 300px;
+    height: 40px;
+    border: 1px solid dodgerblue;
+}
+
+.cajita{
+    width: 190px;
+    height: 40px;
+    border: 1px solid dodgerblue;
+}
+

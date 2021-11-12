@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname,'')));
 app.post('/validar',(req,res) => {
     const {c_usuario, c_contrasena} = req.body;
     
-    console.log(c_usuario + "," + c_contrasena);
+//    console.log(c_usuario + "," + c_contrasena);
 
     if(c_usuario == "admininicial" && c_contrasena == "admin123456"){
         res.status(200).send('Usuario logueado correctamente')
@@ -18,6 +18,23 @@ app.post('/validar',(req,res) => {
     else{
         res.status(500).send('Usuario o clave incorrecta');
     }
+});
+
+app.post('/guardar_venta',(req,res) => {
+/*    const {c_usuario, c_contrasena} = req.body;
+    
+    console.log(c_usuario + "," + c_contrasena);
+
+    if(c_usuario == "admininicial" && c_contrasena == "admin123456"){
+        res.status(200).send('Usuario logueado correctamente')
+    }
+    else{
+        res.status(500).send('Usuario o clave incorrecta');
+    }*/
+
+    // Hay que validar que los campos esten correctos
+
+    res.status(200).send("Guardando la venta");
 });
 
 app.listen(3000,() => {
