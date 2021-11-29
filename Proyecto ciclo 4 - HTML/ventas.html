@@ -15,60 +15,62 @@
                 <table>
                     <tr>
                         <td><label for="">Cédula</label></td>
-                        <td><input type="number" required maxlength="15" id="cedula_cliente" class="caja" min="0"/></td>
+                        <td><input type="number" required maxlength="15" id="cedula_cliente" name="cedula_cliente" class="caja" min="0"/></td>
                         <td><input type="button" class="button" value="Consultar" id="btn_consultar"/></td>
                         <td><label for="">Cliente</label></td>
-                        <td><input type="text" maxlength="50" id="cliente" class="caja" disabled/></td>
+                        <td><input type="text" maxlength="50" id="nombre_cliente" class="caja" disabled/></td>
                         <td><label for="">Consec.</label></td>
-                        <td><input type="text" required maxlength="15" id="consec" class="caja" disabled/></td>
+                        <td><input type="text" required maxlength="15" id="consec" name="consec" class="caja" disabled/></td>
                     </tr>
-                    <tr><td><label> </label></td></tr>
+                    <tr><td><label> </label></td><td colspan="5"><div id="msg_error"></div></td></tr>
                 </table>
                 <table>
                     <tr>
-                        <td><label for="">Cod.Producto </label></td>
-                        <td><label></label> </td>
-                        <td><label for="">Nombre Producto </label></td>
-                        <td><label for="">Cant. </label></td>
-                        <td><label for="">Vlr.Total </label></td>
+                        <th><label for="">Cod.Producto </label></th>
+                        <th><label></label> </th>
+                        <th><label for="">Nombre Producto </label></th>
+                        <th><label for="">Cant. </label></th>
+                        <th><label for="">Vlr.Total </label></th>
                     </tr>
                     <tr>
-                        <td><input type="text"  maxlength="15" id="cod_producto1" class="caja" disabled/></td>
+                        <td><input type="number"  maxlength="15" id="cod_producto1" name="codigo_producto1" class="caja" min="0" disabled/></td>
                         <td><input type="button" class="button" value="Consultar" id="btn_consultar1" disabled/></td>
                         <td><input type="text"  maxlength="80" id="nombre_producto1" class="cajas" disabled/></td>
-                        <td><input type="number"  maxlength="5" id="cant1" class="cajon" min="0" disabled/></td>
-                        <td><input type="number"  maxlength="15" id="valor_total1" class="caja" disabled/></td>
+                        <td><input type="number"  maxlength="5" id="cant1" name="cant1" class="cajon" min="0" disabled/></td>
+                        <td><input type="number"  maxlength="15" id="valor_total1" name="valor_total1" class="cajita" disabled/></td>
+                        <td><input type="hidden" id="valor_unitario1" name="valor_unitario1" /></td>
+                        <td><input type="hidden" id="valor_iva1" name="valor_iva1" /></td>
                     </tr>
                     <tr>
-                        <td><input type="text"  maxlength="15" id="cod_producto2" class="caja" disabled/></td>
+                        <td><input type="number"  maxlength="15" id="cod_producto2" name="codigo_producto2" class="caja"  min="0" disabled/></td>
                         <td><input type="button" class="button" value="Consultar" id="btn_consultar2" disabled/></td>
                         <td><input type="text"  maxlength="80" id="nombre_producto2" class="cajas"  disabled/></td>
-                        <td><input type="number"  maxlength="5" id="cant2" class="cajon" min="0" disabled/></td>
-                        <td><input type="text"  maxlength="15" id="valor_total2" class="caja" disabled/></td>
+                        <td><input type="number"  maxlength="5" id="cant2" name="cant2" class="cajon" min="0" disabled/></td>
+                        <td><input type="number"  maxlength="15" id="valor_total2" name="valor_total2" class="cajita" disabled/></td>
                     </tr>
                     <tr>
-                        <td><input type="text" maxlength="15" id="cod_producto3" class="caja" disabled/></td>
+                        <td><input type="number" maxlength="15" id="cod_producto3"  name="codigo_producto3" class="caja"  min="0" disabled/></td>
                         <td><input type="button" class="button" value="Consultar" id="btn_consultar3" disabled/></td>
                         <td><input type="text" maxlength="80" id="nombre_producto3" class="cajas" disabled/></td>
-                        <td><input type="number" maxlength="5" id="cant3" class="cajon" min="0" disabled/></td>
-                        <td><input type="text" maxlength="15" id="valor_total3" class="caja" disabled/></td>
+                        <td><input type="number" maxlength="5" id="cant3" name="cant3" class="cajon" min="0" disabled/></td>
+                        <td><input type="number" maxlength="15" id="valor_total3" name="valor_total3" class="cajita" disabled/></td>
                     </tr>
                     <tr>
                         <tr>
                             <td></td>
                             <td colspan="2" rowspan="3" ><input type="submit" class="button" value="Confirmar" id="btn_confirmar" disabled/></td>
-                            <td><label for="">Total Venta </label></td>
-                            <td><input type="text" required maxlength="15" id="total_venta" class="cajita" disabled/></td>
+                            <td style = "text-align: right;"><label for="">Total Venta </label></td>
+                            <td><input type="number" required maxlength="15" id="total_venta" class="cajita" disabled/></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td colspan =><label for="">Total IVA </label></td>
-                            <td><input type="text" required maxlength="15" id="total_iva" class="cajita" disabled/></td>
+                            <td style = "text-align: right;"><label for="" >Total IVA </label></td>
+                            <td><input type="number" required maxlength="15" id="total_iva" class="cajita" disabled /></td>
                         </tr>
                         <tr>
                             <td></td>
-                            <td><label for="">Total con IVA </label></td>
-                            <td><input type="text" required maxlength="15" id="total_coniva" class="cajita" disabled/></td>
+                            <td style = "text-align: right;"><label for="">Total con IVA </label></td>
+                            <td><input type="number" required maxlength="15" id="total_coniva" class="cajita" disabled/></td>
                         </tr>
                     </tr>
                 </table>

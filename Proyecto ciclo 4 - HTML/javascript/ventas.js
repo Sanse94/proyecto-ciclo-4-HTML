@@ -21,14 +21,35 @@ window.onload = function() {
     document.getElementById("cant3").onchange = calcula_total3;
 }
 
+
 function buscar_cliente() {
     var cedula = document.getElementById("cedula_cliente").value;
 
-    // buscarcliente por cedula
-    document.getElementById("cliente").value = "nombre del cliente";
+    if (cedula !== "") {
+        var direccion = "http://localhost:8181/clientes/buscar/" + cedula;
 
-    document.getElementById("cod_producto1").disabled = false;
-    document.getElementById("btn_consultar1").disabled = false;
+        // buscarcliente por cedula
+        fetch(direccion, {method: "GET"})
+            .then(resp => resp.json())
+            .then(function(data) {
+                document.getElementById("nombre_cliente").value = data.nombre_cliente;
+                document.getElementById("cod_producto1").disabled = false;
+                document.getElementById("btn_consultar1").disabled = false;
+                document.getElementById("msg_error").innerHTML = '';
+            })
+            .catch(function(error) {
+                document.getElementById("nombre_cliente").value = "";
+                document.getElementById("cod_producto1").disabled = true;
+                document.getElementById("btn_consultar1").disabled = true;
+                document.getElementById("msg_error").innerHTML = 'Ese cliente no se encuentra registrado en el sistema';
+            });
+
+        document.getElementById("cod_producto1").disabled = false;
+        document.getElementById("btn_consultar1").disabled = false;
+    }
+    else {
+        console.log("cedula ==" + cedula);
+    }
 }
 
 function buscar_producto1() {
@@ -36,7 +57,14 @@ function buscar_producto1() {
 
     // si encuentra el producto activar todo
 
+    document.getElementById("cedula_cliente").disabled = true;
+    document.getElementById("btn_consultar").disabled = true;
+
+    document.getElementById("nombre_producto1").value = "nombre PRODUCTO 1";
     document.getElementById("cant1").disabled = false;
+    document.getElementById("valor_unitario1").value = valor_unitario1;
+    document.getElementById("valor_iva1").value = iva1;
+
     document.getElementById("cod_producto2").disabled = false;
     document.getElementById("btn_consultar2").disabled = false;
 }
