@@ -13,24 +13,11 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>La Genérica</title>
   </head>
-
-  <body>
-    <header>
-      <h1>Cadena de Tiendas La Genérica</h1>
-    </header>
-    <div class="contenedor">
-      <section class="seccion">
-        <div>
-          <p>Bienvenido a la tienda La Generica</p>
-        </div>
-        <div>
-          <p>Presione el botón para continuar</p>
-        </div>
-      </section>
-      <div class="buttons">
-        <a href="login.html" >
-        <button class="button">Ingresar</button></a>
-      </div>
-    </div>
-  </body>
+  <frameset rows="120px, *" frameborder="0" noresize="true">
+    <frame src="encabezado.html"></frame>
+    <frameset cols="200px, *">
+      <frame name="menu" id="menu" src=""></frame>
+      <frame name="principal" id="principal" src="bienvenida.html"></frame>
+    </frameset>
+  </frameset>
 </html>

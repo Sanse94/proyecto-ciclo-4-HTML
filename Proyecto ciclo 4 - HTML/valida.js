@@ -1,23 +1,24 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const app = express();
+//const node_ventas = require('./node_venta');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
-app.use(express.static(path.join(__dirname,'')));
+app.use(express.static(path.join(__dirname,'.')));
 
-app.post('/validar',(req,res) => {
-    const {c_usuario, c_contrasena} = req.body;
+app.post('/guardar_venta',(req,res) => {
+
+    //    const {cedula_cliente} = req.body;
     
-    console.log(c_usuario + "," + c_contrasena);
+    let cedula_cliente = req.body.cedula_cliente;
 
-    if(c_usuario == "admininicial" && c_contrasena == "admin123456"){
-        res.status(200).send('Usuario logueado correctamente')
-    }
-    else{
-        res.status(500).send('Usuario o clave incorrecta');
-    }
+    console.log(req.body);
+
+    // Hay que validar que los campos esten correctos
+
+    res.status(200).send("Guardando la venta");
 });
 
 app.listen(3000,() => {
