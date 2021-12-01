@@ -15,13 +15,13 @@
 
   <body>
     <div class="contenedor">
-      <form>
+      <form class="form-inline" action="convertir" method="post">
         <section>
           <label>Nombre del archivo</label>
-          <input type="file" accept="text/csv" class="c_archivo" name="c_archivo"/>
+          <input type="file" id="files" name='files' class="form-control" accept=".csv" required/>
         </section>
-        <div class="boton_cp">
-          <input type="submit" class="button" value="Cargar"></input>
+        <div class="form-group">
+          <input type="submit" id="submit-file" class="btn btn-primary" value="Cargar"></input>
         </div>
       </form>
     </div>
