@@ -21,9 +21,29 @@ app.post('/convertir',(req,resp) => {
     const  {
         files
     }=req.body;
+
+    // eliminar los productos anteriores
+    const optiones = {
+      host: "localhost",
+      port: puerto_productos,
+      path: "/productos/eliminar",
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+//        "Content-Length": data.length,
+      },
+    };
+    req = http.request(optiones, (res) => {
+    });
+    req.on("error", (err) => {
+      console.log("Error: " + err.message);
+    });
+    req.end();
+
+    // cargar el archivo csv
     const converter = csv()
-    .fromFile(files)
-    .then((json) => {
+      .fromFile(files)
+      .then((json) => {
         json.forEach((row) => {
 
             const data = JSON.stringify(row);
@@ -38,6 +58,7 @@ app.post('/convertir',(req,resp) => {
                   "Content-Length": data.length,
                 },
               };
+              
               req = http.request(options, (res) => {
                 //status code of the request sent
                 console.log("statusCode: ", res.statusCode);
@@ -65,20 +86,6 @@ app.post('/convertir',(req,resp) => {
           alert("¡archivo cargado!")
   });
   });
-
-
-app.post('/guardar_venta',(req,res) => {
-
-    //    const {cedula_cliente} = req.body;
-    
-    let cedula_cliente = req.body.cedula_cliente;
-
-    console.log(req.body);
-
-    // Hay que validar que los campos esten correctos
-
-    res.status(200).send("Guardando la venta");
-});
 
 app.listen(3000,() => {
     console.log('Servidor inicia puerto 3000')

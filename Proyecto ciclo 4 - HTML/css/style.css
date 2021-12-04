@@ -154,6 +154,13 @@ input[type="number"]
     -moz-appearance:textfield !important;
 }
 
+input[type="file"] {
+    top: 10px;
+    left: 8px;
+    font-size: 17px;
+    color: #b8b8b8;
+  }
+
 /*estilo botones reportes*/
 .b_reportes{
     display: flex;
