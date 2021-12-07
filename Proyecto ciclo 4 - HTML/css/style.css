@@ -145,6 +145,7 @@ nav li {
 
 #msg_error {
     color: red;
+    text-align: center;
 }
 
 input[type="number"]

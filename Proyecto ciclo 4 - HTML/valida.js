@@ -18,9 +18,7 @@ const puerto_ventas = 8182;
 const puerto_consolida = 0;
 
 app.post('/convertir',(req,resp) => { 
-    const  {
-        files
-    }=req.body;
+    const  { files } = req.body;
 
     // eliminar los productos anteriores
     const optiones = {
@@ -33,6 +31,7 @@ app.post('/convertir',(req,resp) => {
 //        "Content-Length": data.length,
       },
     };
+
     req = http.request(optiones, (res) => {
     });
     req.on("error", (err) => {
@@ -69,7 +68,7 @@ app.post('/convertir',(req,resp) => {
                 });
                 //The whole response has been received. Display it into the console.
                 res.on("end", () => {
-                  console.log("Result is: " + result);
+                  console.log("Result is: " + contador_productos + result);
                 });
               });
               //error if any problem with the request
@@ -83,9 +82,9 @@ app.post('/convertir',(req,resp) => {
         });
 
         let alert = require('alert'); 
-          alert("¡archivo cargado!")
+          alert("¡archivo cargado!");
   });
-  });
+});
 
 app.listen(3000,() => {
     console.log('Servidor inicia puerto 3000')
