@@ -112,43 +112,56 @@ function total_producto(cod_producto) {
 
 function calcula_total1() {
 
-    total_producto(1)
-
-    if (document.getElementById("cant1").value == 0.0) {
+    if (document.getElementById("cant1").value <= 0.0) {
         document.getElementById("cod_producto2").disabled = true;
         document.getElementById("btn_consultar2").disabled = true;
+        document.getElementById("msg_error").innerHTML = "La cantidad debe ser mayor que 0";
+        document.getElementById("cant1").focus();
     }
     else {
+        total_producto(1)
+
+        document.getElementById("msg_error").innerHTML = "";
         document.getElementById("cod_producto2").disabled = false;
         document.getElementById("btn_consultar2").disabled = false;
-    }
 
-    calcula_totales();
+        calcula_totales();
+    }
 }
 
 
 function calcula_total2() {
 
-    total_producto(2);
-
-    if (document.getElementById("cant2").value == 0.0) {
+    if (document.getElementById("cant2").value <= 0.0) {
         document.getElementById("cod_producto3").disabled = true;
         document.getElementById("btn_consultar3").disabled = true;
+        document.getElementById("msg_error").innerHTML = "La cantidad debe ser mayor que 0";
+        document.getElementById("cant2").focus();
     }
     else {
+        total_producto(2);
+
         document.getElementById("cod_producto3").disabled = false;
         document.getElementById("btn_consultar3").disabled = false;
-    }
 
-    calcula_totales();
+        calcula_totales();
+    }
 }
 
 
 function calcula_total3() {
 
-    total_producto(3);
 
-    calcula_totales();
+    if (document.getElementById("cant3").value <= 0.0) {
+        document.getElementById("cod_producto3").disabled = true;
+        document.getElementById("btn_consultar3").disabled = true;
+        document.getElementById("msg_error").innerHTML = "La cantidad debe ser mayor que 0";
+        document.getElementById("cant3").focus();
+    }
+    else {
+        total_producto(3);
+        calcula_totales();
+    }
 }
 
 
