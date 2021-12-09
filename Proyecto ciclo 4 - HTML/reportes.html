@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Genérica - Reportes</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="javascript/reportes.js" type="text/javascript"></script>
 </head>
 
 <body>
-   <div class="reportes">
-     <div class="b_reportes">
-      <input type="submit" class="boton_r" id="boton_clientes" value="Listado de Clientes"></input></a>
-      <input type="submit" class="boton_r" id="boton_ventas" value="Ventas por Cliente"></input></a>
-      </div>
-      <div class=t_reportes id="t_reportes">  
-      </div> 
+  <div class="reportes">
+    <div class="b_reportes">
+      <input type="button" class="boton_r" id="boton_clientes" value="Listado de Clientes"></input>
+      <input type="button" class="boton_r" id="boton_ventas" value="Ventas por Cliente"></input>
     </div>
-    <script src="javascript/tablas.js"></script>
+    <input type="hidden" id="oculto" value="0"></input>
+    <div class=t_reportes id="t_reportes">  
+    </div> 
+  </div>
 </body>
 </html>
