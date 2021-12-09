@@ -24,7 +24,7 @@ async function listar_clientes() {
 
       })
       .catch(function(error) {
-        console.log("entro al catch");
+        console.log("Error al cargar los clientes ", error);
         //No hay clientes o hay un error de lectura
           
       });
@@ -81,8 +81,6 @@ async function listar_ventas() {
           
       });
 
-  console.log("Clientes -> ", clientes);
-
   direccion = "http://localhost:8182/ventas/listar";
   var total=0.0;
   var lista_ventas=[];
@@ -104,16 +102,12 @@ async function listar_ventas() {
           
       });
       
-  console.log("Ventas -> ", lista_ventas);
-
   lista_ventas.forEach(venta => {
     clientes.forEach(cliente => {
       if (cliente.cedula == venta.cliente)
         cliente.valor_total += venta.valor_venta;
     }) 
   });
-
-  console.log("Clientes con ventas-> ", clientes);
 
   var total_venta = 0.0;
 
