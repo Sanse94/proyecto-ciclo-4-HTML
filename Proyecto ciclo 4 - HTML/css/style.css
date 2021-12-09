@@ -88,6 +88,18 @@ label{
     cursor: pointer;
 }
 
+.button:disabled{
+    padding: 20px 0px;
+    width: 130px;
+    font-size: 20px;
+    line-height: 5px;
+    color: red;
+    border-radius: 10px;
+    background-color: rgb(150, 30, 80);
+    transition: all .6s ease;
+    cursor: pointer;
+}
+
 .button:hover{
     color: black;
     background: white;
@@ -221,11 +233,10 @@ input[type="file"] {
 }
 
 .total{
-    font-size: 30px;
-    padding-left: 100px;
+    font-size: 25px;
+    padding-right: 20px;
     padding-top: 50px;
     color:rgb(23, 77, 131);
-    text-align: right;
 }
 
 .total2{
