@@ -15,15 +15,34 @@ const puerto_productos = 9090;
 const puerto_clientes = 8181;
 const puerto_proveedores = 9091;
 const puerto_ventas = 8182;
-const puerto_consolida = 0;
+const puerto_consolida = 1111;
 
 app.post('/convertir',(req,resp) => { 
-    const  {
-        files
-    }=req.body;
+    const  { files } = req.body;
+
+    // eliminar los productos anteriores
+    const optiones = {
+      host: "localhost",
+      port: puerto_productos,
+      path: "/productos/eliminar",
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+//        "Content-Length": data.length,
+      },
+    };
+
+    req = http.request(optiones, (res) => {
+    });
+    req.on("error", (err) => {
+      console.log("Error: " + err.message);
+    });
+    req.end();
+
+    // cargar el archivo csv
     const converter = csv()
-    .fromFile(files)
-    .then((json) => {
+      .fromFile(files)
+      .then((json) => {
         json.forEach((row) => {
 
             const data = JSON.stringify(row);
@@ -38,6 +57,7 @@ app.post('/convertir',(req,resp) => {
                   "Content-Length": data.length,
                 },
               };
+              
               req = http.request(options, (res) => {
                 //status code of the request sent
                 console.log("statusCode: ", res.statusCode);
@@ -48,7 +68,7 @@ app.post('/convertir',(req,resp) => {
                 });
                 //The whole response has been received. Display it into the console.
                 res.on("end", () => {
-                  console.log("Result is: " + result);
+                  console.log("Result is: " + contador_productos + result);
                 });
               });
               //error if any problem with the request
@@ -62,22 +82,8 @@ app.post('/convertir',(req,resp) => {
         });
 
         let alert = require('alert'); 
-          alert("¡archivo cargado!")
+          alert("¡archivo cargado!");
   });
-  });
-
-
-app.post('/guardar_venta',(req,res) => {
-
-    //    const {cedula_cliente} = req.body;
-    
-    let cedula_cliente = req.body.cedula_cliente;
-
-    console.log(req.body);
-
-    // Hay que validar que los campos esten correctos
-
-    res.status(200).send("Guardando la venta");
 });
 
 app.listen(3000,() => {

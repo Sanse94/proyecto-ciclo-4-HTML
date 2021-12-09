@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Genérica - Clientes</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="javascript/clientes.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="contenedor">
@@ -14,26 +15,32 @@
                 <table>
                     <tr>
                         <td><label for="">Cédula</label></td>
-                        <td><input type="text" required maxlength="15" id="cedula" class="caja"/></td>
+                        <td><input type="text" required maxlength="15" id="ced_cliente" class="caja"/></td>
                         <td><label for="">Teléfono</label></td>
-                        <td><input type="text" maxlength="15" id="telefono" class="caja" /></td>
+                        <td><input type="text" maxlength="15" id="telefono" class="caja"  required disabled/></td>
                     </tr>
                     <tr>
                         <td><label for="">Nombre Completo</label></td>
-                        <td><input type="text" required maxlength="50" class="caja" /></td>
+                        <td><input type="text" id = "nombre" maxlength="50" class="caja" required disabled/></td>
                         <td><label for="">Correo Electrónico</label></td>
-                        <td><input type="email" maxlength="50" id="correo" class="caja" /></td>
+                        <td><input type="email" maxlength="50" id="correo" class="caja" required disabled/></td>
                     </tr>
                     <tr>
                         <td><label for="">Dirección</label></td>
-                        <td><input type="text" required maxlength="50" class="caja" /></td>
+                        <td><input type="text" id="direccion" maxlength="50" class="caja" required disabled/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" ><label> </label></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" ><label id="msg_error" class="msg_error"></label></td>
                     </tr>
                 </table>
                 <div  class="buttons_crud">
-                    <input type="submit" class="button" value="Consultar" id="btn_consultar"> 
-                    <input type="submit" class="button" value="Crear" id="btn_crear"> 
-                    <input type="submit" class="button" value="Actualizar" id="btn_actualizar"> 
-                    <input type="submit" class="button" value="Borrar" id="btn_borrar"> 
+                    <input type="button" class="button" value="Consultar" id="btn_consultar" disabled> 
+                    <input type="button" class="button" value="Crear" id="btn_crear" disabled> 
+                    <input type="button" class="button" value="Actualizar" id="btn_actualizar" disabled> 
+                    <input type="button" class="button" value="Borrar" id="btn_borrar" disabled> 
                 </div>
             </form>
         </section>

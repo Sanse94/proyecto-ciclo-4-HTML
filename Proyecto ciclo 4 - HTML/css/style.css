@@ -88,6 +88,18 @@ label{
     cursor: pointer;
 }
 
+.button:disabled{
+    padding: 20px 0px;
+    width: 130px;
+    font-size: 20px;
+    line-height: 5px;
+    color: red;
+    border-radius: 10px;
+    background-color: rgb(150, 30, 80);
+    transition: all .6s ease;
+    cursor: pointer;
+}
+
 .button:hover{
     color: black;
     background: white;
@@ -145,6 +157,7 @@ nav li {
 
 #msg_error {
     color: red;
+    text-align: center;
 }
 
 input[type="number"]
@@ -153,6 +166,13 @@ input[type="number"]
     margin: 0;
     -moz-appearance:textfield !important;
 }
+
+input[type="file"] {
+    top: 10px;
+    left: 8px;
+    font-size: 17px;
+    color: #b8b8b8;
+  }
 
 /*estilo botones reportes*/
 .b_reportes{
@@ -186,7 +206,7 @@ input[type="number"]
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 100px;
+    margin-top: 80px;
     font-size: 40px;
     color:rgb(23, 77, 131);
 }
@@ -195,8 +215,8 @@ input[type="number"]
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 100px;
-    font-size: 30px;
+    margin-top: 80px;
+    font-size: 20px;
     border-collapse: collapse;
 }
 
@@ -213,15 +233,17 @@ input[type="number"]
 }
 
 .total{
-    font-size: 30px;
-    padding-left: 100px;
+    font-size: 25px;
+    padding-right: 20px;
     padding-top: 50px;
     color:rgb(23, 77, 131);
 }
 
 .total2{
+    font-size: 20px;
     height: 50px;
     width: 350px;
     margin-top: 50px;
     border: 2px solid rgb(98, 164, 230);
+    text-align: right;
 }
