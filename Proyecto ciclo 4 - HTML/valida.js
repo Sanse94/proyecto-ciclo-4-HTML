@@ -68,7 +68,7 @@ app.post('/convertir',(req,resp) => {
                 });
                 //The whole response has been received. Display it into the console.
                 res.on("end", () => {
-                  console.log("Result is: " + contador_productos + result);
+                  console.log("Result is: ", result);
                 });
               });
               //error if any problem with the request

@@ -93,9 +93,9 @@ label{
     width: 130px;
     font-size: 20px;
     line-height: 5px;
-    color: red;
+    color: whitesmoke;
     border-radius: 10px;
-    background-color: rgb(150, 30, 80);
+    background-color: rgb(251, 88, 88);
     transition: all .6s ease;
     cursor: pointer;
 }
